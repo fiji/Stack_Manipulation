@@ -24,6 +24,11 @@
 		</dependency>
 	</dependencies>
 
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>http://jenkins.imagej.net/job/Stack_Manipulation/</url>
+	</ciManagement>
+
 	<scm>
 		<connection>scm:git:git://github.com/fiji/Stack_Manipulation</connection>
 		<developerConnection>scm:git:git@github.com:fiji/Stack_Manipulation</developerConnection>
