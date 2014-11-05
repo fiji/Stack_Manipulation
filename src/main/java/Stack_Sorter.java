@@ -1,17 +1,42 @@
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
-import java.util.*;
-import java.awt.datatransfer.*;
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import ij.io.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
+import ij.gui.ImageWindow;
+import ij.gui.Roi;
+import ij.gui.Toolbar;
+import ij.io.Opener;
+import ij.measure.Calibration;
+import ij.measure.Measurements;
 import ij.plugin.PlugIn;
-import ij.plugin.filter.PlugInFilter;
-import ij.plugin.frame.PlugInFrame;
-import ij.measure.*;
 import ij.plugin.filter.Analyzer;
+import ij.plugin.frame.PlugInFrame;
+import ij.process.Blitter;
+import ij.process.ByteProcessor;
+import ij.process.ColorProcessor;
+import ij.process.FloatProcessor;
+import ij.process.ImageProcessor;
+import ij.process.ImageStatistics;
+import ij.process.ShortProcessor;
+import ij.process.TypeConverter;
+
+import java.awt.Button;
+import java.awt.FileDialog;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Image;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.Rectangle;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.Transferable;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 
 /** Bob Dougherty.  Plugin to reorder slides in a stack

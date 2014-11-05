@@ -1,17 +1,30 @@
-import java.awt.*;
-import java.awt.image.*;
-import java.io.*;
-import java.util.*;
-import ij.io.*;
-import ij.*;
-import ij.gui.*;
-import ij.util.StringSorter;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.gui.GenericDialog;
+import ij.io.FileSaver;
+import ij.io.Opener;
 import ij.plugin.PlugIn;
-import ij.plugin.*;
-import ij.process.*;
-import javax.swing.*;
-import java.awt.event.*;
-import javax.swing.event.*;
+import ij.process.ImageProcessor;
+import ij.util.StringSorter;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.util.Hashtable;
+
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 /* Christopher Philip Mauer. Copyright (c) 2003.
 Permission to use, copy, modify, and distribute this software for any purpose 
 without fee is hereby granted, provided that this entire notice is included in 

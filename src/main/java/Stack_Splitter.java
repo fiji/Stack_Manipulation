@@ -1,9 +1,11 @@
-import ij.*;
-import ij.process.*;
-import ij.plugin.*;
-import java.lang.*;
-import java.awt.*;
-import java.awt.image.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.WindowManager;
+import ij.plugin.PlugIn;
+import ij.process.ImageProcessor;
+
+import java.awt.image.ColorModel;
 import java.text.DecimalFormat;
 
 /** Splits a stack into multiple substacks. The number of such

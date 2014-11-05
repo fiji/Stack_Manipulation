@@ -1,8 +1,10 @@
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
-import java.awt.*;
-import ij.plugin.*;
+import ij.IJ;
+import ij.ImagePlus;
+import ij.ImageStack;
+import ij.WindowManager;
+import ij.gui.GenericDialog;
+import ij.plugin.PlugIn;
+import ij.process.ImageProcessor;
 
 /** This plugin keeps slices from a stack. */
 public class Slice_Keeper implements PlugIn {
