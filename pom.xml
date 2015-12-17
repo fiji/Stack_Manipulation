@@ -24,6 +24,10 @@
 		<tag>HEAD</tag>
 		<url>https://github.com/fiji/Stack_Manipulation</url>
 	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/fiji/Stack_Manipulation/issues</url>
+	</issueManagement>
 	<ciManagement>
 		<system>Jenkins</system>
 		<url>http://jenkins.imagej.net/job/Stack_Manipulation/</url>
