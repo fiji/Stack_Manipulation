@@ -14,7 +14,7 @@ image.
 
 @see ij.plugin.PlugIn
 
-@author Patrick Kelly <phkelly@ucsd.edu>
+@author Patrick Kelly
 
 *** modified 26th April 01 by Greg Joss  gjoss@rna.bio.mq.edu.au
 

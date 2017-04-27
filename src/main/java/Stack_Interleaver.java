@@ -12,7 +12,7 @@ import java.awt.Color;
 /**
  * Interleaves two stacks to create a new stack
  * This plugin is modified from Stack_Combiner (see Wayne Rasband)
- * @author J. Anthony Parker, MD PhD <J.A.Parker@IEEE.org>
+ * @author J. Anthony Parker, MD PhD
  * @version 20September2001
  */
 
