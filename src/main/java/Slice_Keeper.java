@@ -3,6 +3,7 @@ import ij.ImagePlus;
 import ij.ImageStack;
 import ij.WindowManager;
 import ij.gui.GenericDialog;
+import ij.measure.Calibration;
 import ij.plugin.PlugIn;
 import ij.process.ImageProcessor;
 
@@ -12,6 +13,8 @@ public class Slice_Keeper implements PlugIn {
 	private static int last = 9999;
 	private static int inc = 2;
 	String title;
+
+	@Override
 	public void run(String arg) {
 		ImagePlus imp = WindowManager.getCurrentImage();
 		if (imp==null)
@@ -22,7 +25,7 @@ public class Slice_Keeper implements PlugIn {
 		if (!showDialog(stack))
 			return;
 		title=imp.getTitle();
-		keepSlices(stack, first, last, inc);
+		keepSlices(stack, first, last, inc, imp.getCalibration());
 		//imp.setStack(null, stack);
 		IJ.register(Slice_Keeper.class);
 	}
@@ -44,6 +47,10 @@ public class Slice_Keeper implements PlugIn {
 	}
 
 	public void keepSlices(ImageStack stack, int first, int last, int inc) {
+		keepSlices(stack, first, last, inc, null);
+	}
+
+	public void keepSlices(ImageStack stack, int first, int last, int inc, Calibration cal) {
 		if (last>stack.getSize())
 		last = stack.getSize();
 
@@ -60,7 +67,13 @@ public class Slice_Keeper implements PlugIn {
 			newstack.addSlice("slice:" + i, ip);
 			count++;
 			}
-		new ImagePlus(title+" kept stack", newstack).show();
+		
+		ImagePlus imp = new ImagePlus(title+" kept stack", newstack);
+		if (cal != null) {
+			cal.pixelDepth = cal.pixelDepth * inc;
+			imp.setCalibration(cal);
+		}
+		imp.show();	
 	}
 
 }

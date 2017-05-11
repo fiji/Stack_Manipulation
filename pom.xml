@@ -11,7 +11,7 @@
 
 	<groupId>sc.fiji</groupId>
 	<artifactId>Stack_Manipulation</artifactId>
-	<version>2.0.3-SNAPSHOT</version>
+	<version>2.1.0-SNAPSHOT</version>
 
 	<name>Stack Manipulation</name>
 	<description>Stack Manipulation plugin for Fiji.</description>
@@ -79,6 +79,11 @@
 			<name>Mark Hiner</name>
 			<url>http://imagej.net/User:Hinerm</url>
 			<properties><id>hinerm</id></properties>
+		</contributor>
+		<contributor>
+			<name>Jan Eglinger</name>
+			<url>http://imagej.net/User:Eglinger</url>
+			<properties><id>imagejan</id></properties>
 		</contributor>
 	</contributors>
 
