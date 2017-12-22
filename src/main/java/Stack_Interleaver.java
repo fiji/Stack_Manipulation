@@ -84,8 +84,8 @@ public class Stack_Interleaver implements PlugIn {
 		}
 
 		GenericDialog gd = new GenericDialog("Interleaver");
-		gd.addChoice("Stack 1:", titles, titles[0]);
-		gd.addChoice("Stack 2:", titles, titles[1]);
+		gd.addChoice("Stack_1:", titles, titles[0]);
+		gd.addChoice("Stack_2:", titles, titles[1]);
 		gd.showDialog();
 		if (gd.wasCanceled())
 			return false;
