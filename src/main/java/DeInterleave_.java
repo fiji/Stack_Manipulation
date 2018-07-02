@@ -85,7 +85,7 @@ public class DeInterleave_ implements PlugIn {
     public ImageStack makeSubStack(ImageStack stack, int beginSlice, int endSlice) {
         ImageStack newStack = new ImageStack(stack.getWidth(), stack.getHeight(), stack.getColorModel());
         for(int i = beginSlice; i < endSlice; ++i) {
-            newStack.addSlice(stack.getProcessor(i+1));
+            newStack.addSlice(stack.getSliceLabel(i+1), stack.getProcessor(i+1));
         }
         return newStack;
     }
@@ -96,7 +96,7 @@ public class DeInterleave_ implements PlugIn {
         ImageStack newStack = new ImageStack(stack.getWidth(), stack.getHeight(), stack.getColorModel());
         for(int channel = 0; channel < nChannels; ++channel) {
             for(int i = channel; i < stack.getSize(); i += nChannels) {
-                newStack.addSlice(stack.getProcessor(i+1));
+                newStack.addSlice(stack.getSliceLabel(i+1), stack.getProcessor(i+1));
             }
         }
         return newStack;
