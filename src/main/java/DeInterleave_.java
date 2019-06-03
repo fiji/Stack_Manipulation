@@ -9,6 +9,7 @@ import ij.ImageStack;
 import ij.Prefs;
 import ij.WindowManager;
 import ij.gui.GenericDialog;
+import ij.gui.ImageWindow;
 import ij.measure.Calibration;
 import ij.plugin.PlugIn;
 
@@ -54,14 +55,16 @@ public class DeInterleave_ implements PlugIn {
             ImagePlus channelImage = new ImagePlus(inputFilename + " #" + channelName, makeSubStack(shuffledStack, beginSlice, endSlice));
             channelImage.show();
             channelImage.setCalibration(oc);
-            channelImage.getWindow().repaint();
+            ImageWindow win = channelImage.getWindow();
+            if (null != win)
+            	win.repaint();
         }
 
         shuffledImage.changes = false;
         shuffledImage.close();
         if (!keep) {
             inputImage.changes = false;
-            inputImage.getWindow().close();
+            inputImage.close();
         }
         IJ.register(DeInterleave_.class);
     }
