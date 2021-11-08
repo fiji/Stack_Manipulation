@@ -95,7 +95,7 @@
 	</mailingLists>
 
 	<scm>
-		<connection>scm:git:git://github.com/fiji/Stack_Manipulation</connection>
+		<connection>scm:git:https://github.com/fiji/Stack_Manipulation</connection>
 		<developerConnection>scm:git:git@github.com:fiji/Stack_Manipulation</developerConnection>
 		<tag>HEAD</tag>
 		<url>https://github.com/fiji/Stack_Manipulation</url>
